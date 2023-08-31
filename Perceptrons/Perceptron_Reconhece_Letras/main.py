@@ -105,7 +105,6 @@ class PixelGridApp:
             print(item)
         self.train_neurons()
 
-
     def clean_data(self):
         self.pick_data()
 
