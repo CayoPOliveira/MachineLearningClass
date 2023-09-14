@@ -50,16 +50,3 @@ class Neuronio:
 
         self.w = weights
         self.b = bias
-
-    def learnHebb(Data):
-        self.n = nSignals = len(Data[0][0])
-        weights = [0 for _ in range(nSignals)]
-        bias = 0
-        for i in range(nSignals):
-            x,t = Data[i]
-            #Novos valores
-            newWeights = [weights[j]+ (t * x[j]) for j in range(nSignals)]
-            weights = newWeights[:]
-            b += t
-        self.w = weights
-        self.b = bias
