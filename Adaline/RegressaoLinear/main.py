@@ -10,7 +10,7 @@ with open("basedeobservacoes.txt", "r") as file:
 Data = [ ( float(d[0]), float(d[1]) ) for d in Data[1:]]
 
 neuronio = Adaline()
-w, b, sqedT = neuronio.learnAdaline(Data, 5000, alpha=1e-3, tolerance=1e-9)
+w, b, sqedT = neuronio.learnAdaline(Data, 10000, alpha=1e-3, tolerance=1e-9)
 
 for d in Data:
     k = neuronio.output(d[0])
@@ -44,3 +44,4 @@ xl = np.linspace(-4, 11, 1000000)
 ax.plot(xl, neuronio.output(xl), '-k', label="Regressão Linear")
 
 fig.savefig("fig1.png")
+plt.show()
